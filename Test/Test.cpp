@@ -4,6 +4,7 @@
 
 using namespace std;
 
+int Myid = 0;
 
 struct Nodo {
 	int id;
@@ -139,7 +140,7 @@ int main()
 void menu() {
 	int op = 0;
 	Nodo* lista = NULL;
-	int Myid = 1;
+	
 	string nombre;
 	string apellido;
 	string telefono;
@@ -172,9 +173,8 @@ void menu() {
 			cin >> celular;
 			cout << "Direccion de contacto: " << endl;
 			cin >> direccion;
-
+			Myid++;
 			insertarLista(lista, Myid, nombre, apellido, telefono, celular, direccion);
-			Myid += 1;
 			system("pause");
 			system("cls");
 			break;
@@ -195,6 +195,7 @@ void menu() {
 		case 4: cout << "Introduce valor a eliminar: " << endl;
 			cin >> Myid;
 			eliminarNodo(lista, Myid);
+			Myid++;
 			system("pause");
 			system("cls");
 			break;
