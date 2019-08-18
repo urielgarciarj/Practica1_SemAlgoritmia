@@ -128,13 +128,11 @@ void eliminarLista(Nodo*& lista, int n) {
 }
 
 
-
 int main()
 {
 	menu();
 	return 0;
 }
-
 
 void menu() {
 	int op = 0;
